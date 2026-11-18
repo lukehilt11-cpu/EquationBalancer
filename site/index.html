@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equation Balancer</title>
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg:#f5f7fb; --card:#fff; --text:#1b2433; --muted:#5b6678; --accent:#1e5aa0; --accent-2:#2d73be; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#10151d; --card:#18202c; --text:#e8edf5; --muted:#9aa6b8; --accent:#4a8fd8; --accent-2:#6aa6e6; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:56px 20px; text-align:center; }
+  img.logo { width:128px; height:128px; }
+  h1 { margin:16px 0 4px; font-size:2.2rem; }
+  p.tag { margin:0 0 32px; color:var(--muted); }
+  .card { background:var(--card); border-radius:16px; padding:28px; box-shadow:0 2px 14px rgba(0,0,0,.08); }
+  .btns { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin:8px 0 18px; }
+  a.btn { display:inline-block; padding:14px 24px; border-radius:10px; background:var(--accent);
+          color:#fff; text-decoration:none; font-weight:600; }
+  a.btn:hover { background:var(--accent-2); }
+  small { color:var(--muted); display:block; }
+  .meta { margin-top:24px; color:var(--muted); font-size:.9rem; }
+  .meta a { color:var(--accent); }
+  code { background:rgba(127,127,127,.15); padding:1px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="icon.png" alt="Equation Balancer icon">
+  <h1>Equation Balancer</h1>
+  <p class="tag">Balance chemical equations instantly. Type one in, get the coefficients.</p>
+
+  <div class="card">
+    <div class="btns">
+      <a class="btn" href="https://github.com/__REPO__/releases/latest/download/EquationBalancer_Setup.exe">Download for Windows</a>
+      <a class="btn" href="https://github.com/__REPO__/releases/latest/download/EquationBalancer-macOS-arm64.dmg">Download for macOS</a>
+    </div>
+    <small>Windows 10/11 &middot; macOS on Apple Silicon (M1 or newer)</small>
+    <p class="meta">
+      Version __VERSION__ &middot; released __DATE__<br>
+      <a href="https://github.com/__REPO__/releases/tag/v__VERSION__">Release notes</a> &middot;
+      <a href="https://github.com/__REPO__/releases">All versions</a>
+    </p>
+  </div>
+
+  <p class="meta">
+    Example: <code>Fe + O2 -&gt; Fe2O3</code> &rarr; <code>4Fe + 3O2 &rarr; 2Fe2O3</code><br><br>
+    Not code-signed. Windows: SmartScreen &rarr; <em>More info</em> &rarr; <em>Run anyway</em>.
+    macOS: right-click the app &rarr; <em>Open</em> the first time.
+  </p>
+</main>
+</body>
+</html>
