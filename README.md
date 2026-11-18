@@ -21,6 +21,22 @@ EquationBalancer/
 └── .gitignore
 ```
 
+## What it understands
+
+- Nested groups: `Ca(OH)2`, `K4[Fe(CN)6]`, `[Cr(N2H4CO)6]4[Cr(CN)6]3`
+- Hydrates: `CuSO4·5H2O` or `CuSO4.5H2O`
+- Ions and electrons: `MnO4^-`, `Fe^3+`, `Cu^2+ + e-` (charge is balanced too)
+- State symbols `(s) (l) (g) (aq)` and pasted Unicode like `H₂O`, `Fe³⁺`
+- Equations that already have coefficients (they're ignored and re-balanced)
+- Arrows `->  -->  =>  =  →  ⇌`
+- Clear errors for typos, bad brackets, species on the wrong side, or equations that mix
+  several independent reactions
+
+## The interface
+
+Plain tkinter/ttk with no extra dependencies: rounded cards, hover buttons, a dark/light toggle
+(☀/☾ top right), clickable example equations, and an atom/charge check shown as chips.
+
 ## Run it directly
 
 ```
@@ -42,7 +58,7 @@ copies it to `/Applications` (or `~/Applications` if that isn't writable).
 
 ## Releasing with GitHub Actions
 
-The workflow builds Windows (`windows-latest`) and macOS Apple Silicon (`macos-14`), creates a
+The workflow builds Windows (`windows-latest`) and macOS Apple Silicon (`macos-15`), creates a
 GitHub Release with `EquationBalancer_Setup.exe` and `EquationBalancer-macOS-arm64.dmg` plus
 auto-generated notes, then redeploys the GitHub Pages site.
 
